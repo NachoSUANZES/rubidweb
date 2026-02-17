@@ -83,21 +83,21 @@ const AboutUs = () => {
                                     year: "2010",
                                     title: "Neural.ONE Created",
                                     desc: "First AI Attribution Model launched by our founders.",
-                                    logo: "/isotipo_Neural.png",
+                                    logo: "./isotipo_Neural.png",
                                     fallbackIcon: <History className="text-rubid-red" />
                                 },
                                 {
                                     year: "30+ Years",
                                     title: "Media Experience",
                                     desc: "Deep expertise leading ADG Media Group.",
-                                    logo: "/isotipo_ADG.png",
+                                    logo: "./isotipo_ADG.png",
                                     fallbackIcon: <Award className="text-blue-500" />
                                 },
                                 {
                                     year: "2026",
                                     title: "Rubid.io Launches",
                                     desc: "Total Automation for the modern advertiser.",
-                                    logo: "/favicon.png", // Using Isotype
+                                    logo: "./favicon.png", // Using Isotype
                                     fallbackIcon: <RocketIcon className="text-white" />
                                 }
                             ].map((item, i) => (

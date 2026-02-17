@@ -163,7 +163,7 @@ const DemoModal = ({ isOpen, onClose }) => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="relative w-full max-w-6xl bg-rubid-black border border-white/10 rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+                        className="relative w-full max-w-6xl bg-rubid-black border border-white/10 rounded-xl overflow-hidden shadow-2xl flex flex-col h-[85vh] md:h-auto md:max-h-[90vh]"
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5 shrink-0">

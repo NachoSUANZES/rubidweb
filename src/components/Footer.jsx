@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-2">
-                        <img src="/logo-horizontal-red.png" alt="RubidWeb" className="h-12 w-auto mb-6" />
+                        <img src="./logo-horizontal-red.png" alt="RubidWeb" className="h-12 w-auto mb-6" />
                         <p className="text-gray-500 max-w-sm mb-6">
                             Redefining digital marketing through automation and artificial intelligence.
                             The future is autonomous.

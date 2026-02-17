@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-rubid-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="flex items-center gap-2 group">
-                    <img src="/logo-horizontal.png" alt="RubidWeb" className="h-10 w-auto group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-300" />
+                    <img src="./logo-horizontal.png" alt="RubidWeb" className="h-10 w-auto group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-300" />
                 </a>
 
                 {/* Desktop Menu */}
