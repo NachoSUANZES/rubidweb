@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { BrainCircuit, TrendingUp, ShieldCheck, Zap } from 'lucide-react';
+import AdmakiIcon from './AdmakiIcon';
 
 const features = [
     {
@@ -42,9 +43,14 @@ const AdmakiSection = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <h2 className="text-sm font-bold tracking-[0.2em] text-rubid-red mb-4 uppercase">Introducing The Core</h2>
-                            <h3 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-                                ADMAKI <br />
-                                <span className="text-gray-500 text-3xl md:text-5xl">The Digital Super-Brain.</span>
+                            <h3 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight flex items-center gap-4">
+                                <div>
+                                    ADMAKI <br />
+                                    <span className="text-gray-500 text-3xl md:text-5xl">The Digital Super-Brain.</span>
+                                </div>
+                                <div className="block">
+                                    <AdmakiIcon className="w-12 h-12 md:w-20 md:h-20 text-white" />
+                                </div>
                             </h3>
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                 Your entire Performance Team in one AI. ADMAKI is the first system that doesn't just assist—it executes with surgical precision and infinite memory.

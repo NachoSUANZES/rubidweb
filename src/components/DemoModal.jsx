@@ -180,8 +180,8 @@ const DemoModal = ({ isOpen, onClose }) => {
                             </button>
                         </div>
 
-                        {/* Main Dashboard Layout */}
-                        <div className="flex flex-col lg:flex-row h-full overflow-hidden">
+                        {/* Main Dashboard Layout (Desktop) */}
+                        <div className="hidden md:flex flex-col lg:flex-row h-full overflow-hidden">
 
                             {/* Left Panel: Metrics & Visuals */}
                             <div className="lg:w-1/3 p-6 border-r border-white/10 space-y-6 overflow-y-auto">
@@ -290,7 +290,59 @@ const DemoModal = ({ isOpen, onClose }) => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        {/* Mobile View: Insights Feed */}
+                        <div className="flex md:hidden flex-col h-full bg-rubid-black relative overflow-hidden">
+                            {/* Mobile Header Gradient */}
+                            <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-rubid-red/20 to-transparent pointer-events-none"></div>
+
+                            <div className="p-6 overflow-y-auto space-y-6 pb-20 relative z-10">
+                                <div className="text-center mb-8">
+                                    <h3 className="text-white font-bold text-lg mb-1">Morning Briefing</h3>
+                                    <p className="text-gray-400 text-xs">ADMAKI has been active for 8h 23m</p>
+                                </div>
+
+                                {/* Timeline Items */}
+                                {[
+                                    { time: "Now", icon: <Cpu size={16} />, title: "Budget Reallocated", desc: "Moved €500 from FB -> TikTok based on lower CPA.", type: "success" },
+                                    { time: "12m ago", icon: <Shield size={16} />, title: "Ad Fraud Auto-Block", desc: "Prevented 240 bot clicks from IP Range 192.168.x.x", type: "warning" },
+                                    { time: "45m ago", icon: <TrendingUp size={16} />, title: "ROAS Milestone", desc: "Campaign 'Summer_V2' hit 520% ROAS.", type: "neutral" },
+                                    { time: "2h ago", icon: <Activity size={16} />, title: "Creative A/B Test", desc: "Winner declared: 'Video_B_Short' (CTR 3.4%)", type: "neutral" },
+                                ].map((item, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: i * 0.2 }}
+                                        className="relative pl-8 border-l border-white/10"
+                                    >
+                                        {/* Timeline Dot */}
+                                        <div className={`absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full ${i === 0 ? 'bg-rubid-red shadow-[0_0_10px_rgba(239,68,68,0.8)]' : 'bg-white/20'}`}></div>
+
+                                        <div className="bg-white/5 border border-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                                            <div className="flex justifying-between items-start mb-2">
+                                                <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
+                                                    <span>{item.time}</span>
+                                                </div>
+                                            </div>
+                                            <h4 className="text-white font-bold text-sm mb-1 flex items-center gap-2">
+                                                {item.icon} {item.title}
+                                            </h4>
+                                            <p className="text-gray-400 text-xs leading-relaxed">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+                            {/* Sticky Action Button */}
+                            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black via-black/90 to-transparent">
+                                <button className="w-full py-3 bg-rubid-red text-white font-bold rounded-lg shadow-lg shadow-rubid-red/20 active:scale-95 transition-transform text-sm">
+                                    View Full Report
+                                </button>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
