@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { PenTool, Target, BarChart, Settings, Rocket, Layers } from 'lucide-react';
+import { useState } from 'react';
+import CaseStudyModal from './CaseStudyModal';
 
 const services = [
     {
@@ -25,6 +27,8 @@ const services = [
 ];
 
 const Services = () => {
+    const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false);
+
     return (
         <section id="services" className="py-24 bg-rubid-black relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
@@ -99,13 +103,17 @@ const Services = () => {
                             <button className="px-8 py-4 bg-white text-rubid-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
                                 Audit My Strategy
                             </button>
-                            <button className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition-colors">
-                                View Case Studies
+                            <button
+                                onClick={() => setIsCaseStudyOpen(true)}
+                                className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition-colors"
+                            >
+                                View Case Study
                             </button>
                         </div>
                     </div>
                 </motion.div>
 
+                <CaseStudyModal isOpen={isCaseStudyOpen} onClose={() => setIsCaseStudyOpen(false)} />
             </div>
         </section>
     );
