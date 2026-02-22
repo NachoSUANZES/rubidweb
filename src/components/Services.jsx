@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { PenTool, Target, BarChart, Settings, Rocket, Layers } from 'lucide-react';
+
 const services = [
     {
         icon: <PenTool size={32} className="text-rubid-red" />,
@@ -26,7 +27,14 @@ const services = [
 const Services = () => {
 
     return (
-        <section id="services" className="py-24 bg-rubid-black relative overflow-hidden">
+        <section id="services" className="py-24 bg-black relative overflow-hidden">
+            {/* Core Background */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.45] mix-blend-screen"
+                style={{ backgroundImage: "url('/core-bg.png')" }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none"></div>
+
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Section Header */}

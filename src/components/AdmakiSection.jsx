@@ -27,9 +27,13 @@ const features = [
 
 const AdmakiSection = () => {
     return (
-        <section id="admaki" className="py-32 bg-rubid-black relative overflow-hidden">
-            {/* Visual Background Noise */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+        <section id="admaki" className="py-32 bg-black relative overflow-hidden">
+            {/* Core Background */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.45] mix-blend-screen"
+                style={{ backgroundImage: "url('/core-bg.png')" }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none"></div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">

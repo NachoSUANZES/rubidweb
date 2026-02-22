@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Users, Database, Layers, Code, BrainCircuit, Globe, RefreshCcw, Activity, Building2, BarChart3, LineChart, Target } from 'lucide-react';
+import { Users, Database, Layers, Code, BrainCircuit, RefreshCcw, Activity, Building2, BarChart3, LineChart, Target, Share2, Smartphone, MonitorPlay, MapPin, Search, PlaySquare, Hexagon, Component } from 'lucide-react';
 import AdmakiIcon from './AdmakiIcon';
 import { useState, useEffect } from 'react';
 
@@ -11,14 +11,14 @@ const agencies = [
 ];
 
 const platforms = [
-    { name: "DV360", color: "bg-blue-500" },
-    { name: "GA4", color: "bg-orange-500" },
-    { name: "GOOGLE ADS", color: "bg-blue-400" },
-    { name: "BING", color: "bg-teal-500" },
-    { name: "META", color: "bg-blue-600" },
-    { name: "TIKTOK", color: "bg-black" },
-    { name: "TABOOLA", color: "bg-blue-800" },
-    { name: "LINKEDIN", color: "bg-blue-700" }
+    { name: "PROGRAMMATIC", color: "bg-blue-500", icon: <Component size={14} className="text-white" /> },
+    { name: "SOCIAL PLATFORMS", color: "bg-pink-600", icon: <Share2 size={14} className="text-white" /> },
+    { name: "MOBILE ADVERTISING", color: "bg-teal-500", icon: <Smartphone size={14} className="text-white" /> },
+    { name: "CONNECTED TV", color: "bg-purple-600", icon: <MonitorPlay size={14} className="text-white" /> },
+    { name: "DOOH", color: "bg-orange-500", icon: <MapPin size={14} className="text-white" /> },
+    { name: "SEARCH ENGINES", color: "bg-blue-400", icon: <Search size={14} className="text-white" /> },
+    { name: "VIDEO CHANNELS", color: "bg-red-600", icon: <PlaySquare size={14} className="text-white" /> },
+    { name: "OTHER DIGITAL", color: "bg-gray-600", icon: <Hexagon size={14} className="text-white" /> }
 ];
 
 const AdmakiDiagram = () => {
@@ -32,8 +32,14 @@ const AdmakiDiagram = () => {
     }, []);
 
     return (
-        <section className="py-24 bg-rubid-black relative overflow-hidden flex flex-col justify-center items-center">
-            <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-[0.03] pointer-events-none"></div>
+        <section className="py-24 bg-black relative overflow-hidden flex flex-col justify-center items-center">
+            {/* Dynamic Background 11.png */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.15] mix-blend-screen"
+                style={{ backgroundImage: "url('/admaki-bg.png')" }}
+            ></div>
+            {/* Subtle top/bottom fade to blend with adjacent black sections without killing the image */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10 w-full max-w-7xl">
                 <div className="text-center mb-16">
@@ -191,7 +197,7 @@ const AdmakiDiagram = () => {
                                     className="bg-black/50 border border-white/10 p-3 rounded-lg flex flex-col items-center justify-center gap-2 hover:bg-white/10 transition-colors relative shadow-lg"
                                 >
                                     <div className={`w-8 h-8 rounded-full ${platform.color} border border-white/20 shadow-[0_0_10px_rgba(255,255,255,0.2)] flex items-center justify-center`}>
-                                        <Globe size={14} className="text-white" />
+                                        {platform.icon}
                                     </div>
                                     <div className="text-[10px] font-bold text-white tracking-wider text-center">{platform.name}</div>
 
@@ -233,24 +239,22 @@ const AdmakiDiagram = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/5 to-transparent rounded-2xl"></div>
 
                         <div className="flex items-center gap-6 relative z-10 w-full justify-between px-8">
-                            {/* Flow from Platforms */}
-                            <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
-                                <Activity className="text-blue-500 animate-pulse" size={16} />
-                                <span className="hidden md:inline">RECEIVING DATA</span>
+                            {/* Logo (Left) */}
+                            <div className="flex flex-col items-start w-[200px]">
+                                <img src="./neuralone_logo_horizontal.png" alt="NEURAL.ONE" className="h-8 md:h-10 object-contain drop-shadow-[0_0_15px_rgba(34,197,94,0.3)]" />
+                                <div className="text-xs text-green-400 font-mono tracking-widest mt-2 px-1">ATTRIBUTION BRAIN</div>
                             </div>
 
-                            <div className="flex flex-col items-center">
-                                <div className="flex items-center gap-3">
-                                    <BrainCircuit className="text-green-500 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]" size={32} />
-                                    <h4 className="text-2xl font-black tracking-widest text-white">NEURAL.ONE</h4>
-                                </div>
-                                <div className="text-xs text-green-400 font-mono tracking-widest mt-1">ATTRIBUTION BRAIN</div>
-                            </div>
-
-                            {/* Flow back to Admaki */}
-                            <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
-                                <span className="hidden md:inline">FEEDING INSIGHTS</span>
+                            {/* Flow back to Admaki (Center) */}
+                            <div className="flex items-center justify-center gap-2 text-xs font-mono text-gray-500 w-[200px]">
                                 <RefreshCcw className="text-green-500 animate-spin-slow" size={16} />
+                                <span className="hidden md:inline">FEEDING INSIGHTS</span>
+                            </div>
+
+                            {/* Flow from Platforms (Right) */}
+                            <div className="flex items-center justify-end gap-2 text-xs font-mono text-gray-500 w-[200px]">
+                                <span className="hidden md:inline">RECEIVING DATA</span>
+                                <Activity className="text-blue-500 animate-pulse" size={16} />
                             </div>
                         </div>
                     </motion.div>

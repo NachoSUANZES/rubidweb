@@ -4,13 +4,18 @@ const Contact = () => {
 
     return (
         <section id="contact" className="py-24 bg-black relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-5"></div>
+            {/* Core Background */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.45] mix-blend-screen"
+                style={{ backgroundImage: "url('/core-bg.png')" }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none"></div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-4xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 relative z-20">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import RubidCore from './components/RubidCore'
 import AdmakiSection from './components/AdmakiSection'
 import Footer from './components/Footer'
 
@@ -21,6 +22,7 @@ function App() {
 
             <main className="relative z-10">
                 <Hero />
+                <RubidCore />
                 <AdmakiSection />
                 <AdmakiDiagram />
                 <Services />

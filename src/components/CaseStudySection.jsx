@@ -13,10 +13,13 @@ const CaseStudySection = () => {
     }, []);
 
     return (
-        <section id="case-study" className="py-24 bg-rubid-black relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-[0.03]"></div>
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+        <section id="case-study" className="py-24 bg-black relative overflow-hidden">
+            {/* Core Background */}
+            <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.45] mix-blend-screen"
+                style={{ backgroundImage: "url('/core-bg.png')" }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none"></div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">

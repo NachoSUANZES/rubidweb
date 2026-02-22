@@ -4,10 +4,12 @@ const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background Elements */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-[url('/bg-grid.svg')] opacity-[0.03]"></div>
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-rubid-red/20 rounded-full blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
+            <div className="absolute inset-0 z-0 bg-black">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.45] mix-blend-screen"
+                    style={{ backgroundImage: "url('/hero-bg.png')" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black pointer-events-none"></div>
             </div>
 
             <div className="container mx-auto px-6 relative z-10 text-center">
@@ -28,12 +30,6 @@ const Hero = () => {
                         Unlock the power of <span className="text-white font-medium">Artificial Intelligence</span> to control your business 24/7, achieve unprecedented efficiency, reduce operational costs, and drive superior outcomes.
                     </p>
 
-                    <div className="flex justify-center items-center mt-4">
-                        <a href="#admaki" className="px-10 py-5 bg-rubid-red text-white font-black uppercase tracking-widest rounded-xl hover:bg-red-600 hover:shadow-[0_0_40px_rgba(222,48,33,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 group">
-                            See in a real business
-                            <span className="w-2 h-2 rounded-full bg-white group-hover:scale-150 transition-transform"></span>
-                        </a>
-                    </div>
                 </motion.div>
             </div>
 
