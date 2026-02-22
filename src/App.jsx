@@ -7,6 +7,9 @@ import Footer from './components/Footer'
 import Services from './components/Services'
 import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
+import AdmakiDiagram from './components/AdmakiDiagram'
+import CaseStudySection from './components/CaseStudySection'
+import DemoSection from './components/DemoSection'
 
 function App() {
     return (
@@ -19,7 +22,10 @@ function App() {
             <main className="relative z-10">
                 <Hero />
                 <AdmakiSection />
+                <AdmakiDiagram />
                 <Services />
+                <CaseStudySection />
+                <DemoSection />
                 <AboutUs />
                 <Contact />
             </main>

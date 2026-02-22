@@ -1,18 +1,6 @@
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, Mail, MapPin, Phone } from 'lucide-react';
-import { useState } from 'react';
-
 const Contact = () => {
-    const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setFormStatus('submitting');
-        // Simulate network request
-        setTimeout(() => {
-            setFormStatus('success');
-        }, 1500);
-    };
 
     return (
         <section id="contact" className="py-24 bg-black relative overflow-hidden">
@@ -74,7 +62,7 @@ const Contact = () => {
                                     <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
                                         <Phone size={20} />
                                     </div>
-                                    <span className="text-sm md:text-base">+34 91 123 45 67</span>
+                                    <span className="text-sm md:text-base">+34 910 053 553</span>
                                 </div>
                             </div>
 
@@ -86,58 +74,33 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Form */}
-                        <div>
-                            {formStatus === 'success' ? (
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    className="h-full flex flex-col items-center justify-center text-center p-6 bg-green-500/10 rounded-xl border border-green-500/20"
-                                >
-                                    <CheckCircle size={48} className="text-green-500 mb-4" />
-                                    <h4 className="text-xl font-bold text-white mb-2">Request Received</h4>
-                                    <p className="text-gray-400 text-sm">Our team will analyze your stack and contact you within 24 hours.</p>
-                                    <button
-                                        onClick={() => setFormStatus('idle')}
-                                        className="mt-6 text-xs text-gray-500 hover:text-white underline"
-                                    >
-                                        Send another request
-                                    </button>
-                                </motion.div>
-                            ) : (
-                                <form onSubmit={handleSubmit} className="space-y-4">
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Name</label>
-                                        <input type="text" required className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-rubid-red focus:ring-1 focus:ring-rubid-red transition-all placeholder-gray-700" placeholder="John Doe" />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Work Email</label>
-                                        <input type="email" required className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-rubid-red focus:ring-1 focus:ring-rubid-red transition-all placeholder-gray-700" placeholder="john@company.com" />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Company URL</label>
-                                        <input type="url" className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-rubid-red focus:ring-1 focus:ring-rubid-red transition-all placeholder-gray-700" placeholder="https://..." />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Goal</label>
-                                        <select className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-rubid-red focus:ring-1 focus:ring-rubid-red transition-all text-sm">
-                                            <option>Automate Media Buying</option>
-                                            <option>Improve Attribution</option>
-                                            <option>Creative Scaling</option>
-                                            <option>Full Platform Demo</option>
-                                        </select>
-                                    </div>
+                        {/* Disruptive CTA Text */}
+                        <div className="flex flex-col justify-center h-full space-y-8 bg-black/40 p-8 rounded-xl border border-white/5 shadow-inner">
+                            <div className="inline-flex items-center gap-2 text-rubid-red font-bold text-xs uppercase tracking-widest border border-rubid-red/20 bg-rubid-red/10 px-3 py-1 rounded-full w-max">
+                                <span className="w-2 h-2 rounded-full bg-rubid-red animate-pulse"></span> The Revolution is Now
+                            </div>
 
-                                    <button
-                                        type="submit"
-                                        disabled={formStatus === 'submitting'}
-                                        className="w-full bg-rubid-red hover:bg-red-600 text-white font-bold py-4 rounded-lg transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed mt-4"
-                                    >
-                                        {formStatus === 'submitting' ? 'Processing...' : 'Request Access'}
-                                        {!formStatus && <Send size={16} className="group-hover:translate-x-1 transition-transform" />}
-                                    </button>
-                                </form>
-                            )}
+                            <h4 className="text-2xl md:text-3xl font-black text-white leading-snug">
+                                AI and automation are rewriting the rules of business.
+                                <span className="text-gray-500 block mt-2">You cannot afford to be left behind.</span>
+                            </h4>
+
+                            <p className="text-gray-400 leading-relaxed">
+                                The era of manual scaling and guesswork is over. We build the intelligent infrastructure that puts our partners years ahead of their competition.
+                            </p>
+                            <p className="text-gray-400 leading-relaxed font-bold border-l-2 border-rubid-red pl-4">
+                                Stop adopting tools. Start automating your dominance. Reach out directly to our engineering and strategy team to see what's possible for your business.
+                            </p>
+
+                            <div className="pt-4">
+                                <a
+                                    href="mailto:hello@rubid.io"
+                                    className="inline-flex items-center justify-center gap-3 w-full md:w-auto bg-rubid-red hover:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-transform hover:-translate-y-1 shadow-[0_4px_20px_rgba(222,48,33,0.3)]"
+                                >
+                                    <Mail size={18} />
+                                    Email our Team Directly
+                                </a>
+                            </div>
                         </div>
 
                     </div>

@@ -38,7 +38,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
                             >
-                                RUBID.IO isn't a startup born yesterday. It's the inevitable evolution of <strong>30+ years of media dominance</strong>.
+                                <span className="text-white font-bold">RUBID</span> isn't just another agency. We are the architecture of the future. A company fundamentally built to <strong>automate and optimize processes AT SCALE</strong>.
                             </motion.p>
 
                             <motion.p
@@ -47,7 +47,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
                             >
-                                Founders <strong>Jesus Ollero</strong> and <strong>Nacho Suanzes</strong> created <strong>ADG Media Group</strong>, the leading independent programmatic marketing group in Spain.
+                                The advertising industry is only the beginning. <strong>ADMAKI</strong> is our first major product to revolutionize <em>Advertising</em>, eliminating inefficiencies through relentless AI. But our exponential vision goes much further.
                             </motion.p>
 
                             <motion.div
@@ -58,7 +58,7 @@ const AboutUs = () => {
                                 className="pl-6 border-l-2 border-rubid-red my-6"
                             >
                                 <p className="text-gray-300 italic mb-2">
-                                    "All our companies share the same genetic code: <strong>Digital DNA & Marketing DNA</strong>. We don't just adapt to the market; we engineer it."
+                                    "We bring the same obsession for efficiency to sectors where milliseconds matter. <strong>Finance, logistics, and beyond.</strong> We don't adapt to the market; we rewire it."
                                 </p>
                             </motion.div>
 
@@ -68,7 +68,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5 }}
                             >
-                                From pioneering AI attribution with <strong>Neural.ONE</strong> 14 years ago to launching Rubid.io today, our mission remains unchanged: <strong>Total Efficiency through Automation</strong>.
+                                From leading ADG Media Group to pioneering AI attribution models with <strong>Neural.ONE</strong> 14 years ago, RUBID is the ultimate super-brain to master complexity.
                             </motion.p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ const AboutUs = () => {
                                 {
                                     year: "2026",
                                     title: "Rubid.io Launches",
-                                    desc: "Total Automation for the modern advertiser.",
+                                    desc: "Total Automation & AI at scale for your business.",
                                     logo: "./favicon.png", // Using Isotype
                                     fallbackIcon: <RocketIcon className="text-white" />
                                 }

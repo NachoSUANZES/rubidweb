@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion';
 import { PenTool, Target, BarChart, Settings, Rocket, Layers } from 'lucide-react';
-import { useState } from 'react';
-import CaseStudyModal from './CaseStudyModal';
-
 const services = [
     {
         icon: <PenTool size={32} className="text-rubid-red" />,
@@ -27,7 +24,6 @@ const services = [
 ];
 
 const Services = () => {
-    const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false);
 
     return (
         <section id="services" className="py-24 bg-rubid-black relative overflow-hidden">
@@ -100,20 +96,19 @@ const Services = () => {
                     <div className="relative z-10">
                         <h4 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to automate your growth?</h4>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <button className="px-8 py-4 bg-white text-rubid-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
-                                Audit My Strategy
-                            </button>
-                            <button
-                                onClick={() => setIsCaseStudyOpen(true)}
-                                className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition-colors"
+                            <a href="#contact" className="px-8 py-4 bg-white text-rubid-black font-bold rounded-lg hover:bg-gray-200 transition-colors inline-block">
+                                Audit My Business
+                            </a>
+                            <a
+                                href="#case-study"
+                                className="px-8 py-4 inline-flex justify-center items-center bg-transparent border border-white/20 text-white font-bold rounded-lg hover:bg-white/5 transition-colors"
                             >
                                 View Case Study
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </motion.div>
 
-                <CaseStudyModal isOpen={isCaseStudyOpen} onClose={() => setIsCaseStudyOpen(false)} />
             </div>
         </section>
     );

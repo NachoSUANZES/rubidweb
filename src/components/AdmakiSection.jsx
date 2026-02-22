@@ -46,14 +46,14 @@ const AdmakiSection = () => {
                             <h3 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight flex items-center gap-4">
                                 <div>
                                     ADMAKI <br />
-                                    <span className="text-gray-500 text-3xl md:text-5xl">The Digital Super-Brain.</span>
+                                    <span className="text-gray-500 text-3xl md:text-5xl">100% Automated Platform.</span>
                                 </div>
                                 <div className="block">
                                     <AdmakiIcon className="w-12 h-12 md:w-20 md:h-20 text-white" />
                                 </div>
                             </h3>
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                Your entire Performance Team in one AI. ADMAKI is the first system that doesn't just assist—it executes with surgical precision and infinite memory.
+                                The world's first fully automated, AI-driven marketing platform. ADMAKI replaces manual labor with intelligent execution, running scaling operations with surgical precision and infinite memory.
                             </p>
 
                             <div className="grid gap-6">
