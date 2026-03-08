@@ -28,7 +28,7 @@ const AboutUs = () => {
                             transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-black mb-8 leading-tight"
                         >
-                            We built the future <br /> 14 years ago.
+                            Re-engineering <br /> the Enterprise.
                         </motion.h3>
 
                         <div className="space-y-6 text-gray-400 leading-relaxed font-light text-lg">
@@ -38,7 +38,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
                             >
-                                <span className="text-white font-bold">RUBID</span> isn't just another agency. We are the architecture of the future. A company fundamentally built to <strong>automate and optimize processes AT SCALE</strong>.
+                                <span className="text-white font-bold">RUBID</span> isn't just an agency. We are the architecture of the future. A company fundamentally built to <strong>automate and optimize business processes AT SCALE</strong>.
                             </motion.p>
 
                             <motion.p
@@ -47,7 +47,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
                             >
-                                The advertising industry is only the beginning. <strong>ADMAKI</strong> is our first major product to revolutionize <em>Advertising</em>, eliminating inefficiencies through relentless AI. But our exponential vision goes much further.
+                                We saw that manual operations were destroying enterprise margins. <strong>ADMAKI</strong> is our first major product to revolutionize <em>Marketing</em> and advertising. But our exponential vision goes much further.
                             </motion.p>
 
                             <motion.div
@@ -58,7 +58,7 @@ const AboutUs = () => {
                                 className="pl-6 border-l-2 border-rubid-red my-6"
                             >
                                 <p className="text-gray-300 italic mb-2">
-                                    "We bring the same obsession for efficiency to sectors where milliseconds matter. <strong>Finance, logistics, and beyond.</strong> We don't adapt to the market; we rewire it."
+                                    "We bring the same obsession for automation to sectors where milliseconds and absolute accuracy matter. <strong>Finance, administration, logistics, and beyond.</strong> We don't adapt to the market; we rewire it."
                                 </p>
                             </motion.div>
 
@@ -68,7 +68,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5 }}
                             >
-                                From leading ADG Media Group to pioneering AI attribution models with <strong>Neural.ONE</strong> 14 years ago, RUBID is the ultimate super-brain to master complexity.
+                                Pioneering advanced AI algorithms and predictive models, RUBID is deploying the ultimate super-brain to master corporate complexity globally.
                             </motion.p>
                         </div>
                     </div>
@@ -80,17 +80,17 @@ const AboutUs = () => {
                         <div className="grid gap-6 relative z-10">
                             {[
                                 {
-                                    year: "2010",
-                                    title: "Neural.ONE Created",
-                                    desc: "First AI Attribution Model launched by our founders.",
-                                    logo: "./isotipo_Neural.png",
+                                    year: "Foundation",
+                                    title: "Core Infrastructure",
+                                    desc: "Pioneering highly accurate process automation models.",
+                                    logo: "./rubid-isotipo-rojo.png",
                                     fallbackIcon: <History className="text-rubid-red" />
                                 },
                                 {
-                                    year: "30+ Years",
-                                    title: "Media Experience",
-                                    desc: "Deep expertise leading ADG Media Group.",
-                                    logo: "./isotipo_ADG.png",
+                                    year: "Evolution",
+                                    title: "Cross-Sector Scale",
+                                    desc: "Expanding algorithmic mastery into Finance and Ops.",
+                                    logo: "./rubid-isotipo-rojo.png",
                                     fallbackIcon: <Award className="text-blue-500" />
                                 },
                                 {

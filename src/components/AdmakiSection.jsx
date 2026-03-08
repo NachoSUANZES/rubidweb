@@ -46,18 +46,18 @@ const AdmakiSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-sm font-bold tracking-[0.2em] text-rubid-red mb-4 uppercase">Introducing The Core</h2>
+                            <h2 className="text-sm font-bold tracking-[0.2em] text-rubid-red mb-4 uppercase">Our First Flagship Product</h2>
                             <h3 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight flex items-center gap-4">
                                 <div>
                                     ADMAKI <br />
-                                    <span className="text-gray-500 text-3xl md:text-5xl">100% Automated Platform.</span>
+                                    <span className="text-gray-500 text-3xl md:text-5xl">Automated Marketing.</span>
                                 </div>
                                 <div className="block">
                                     <AdmakiIcon className="w-12 h-12 md:w-20 md:h-20 text-white" />
                                 </div>
                             </h3>
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                The world's first fully automated, AI-driven marketing platform. ADMAKI replaces manual labor with intelligent execution, running scaling operations with surgical precision and infinite memory.
+                                Our premier specialized product for the Advertising and Marketing sector. ADMAKI acts as the central intelligence hub, replacing manual labor with autonomous execution and running massive campaigns with surgical precision and infinite memory.
                             </p>
 
                             <div className="grid gap-6">

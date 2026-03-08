@@ -27,7 +27,7 @@ const Hero = () => {
                         PROCESS AUTOMATION <br /> & AI DECISION MAKING <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-rubid-white to-gray-500">AT SCALE</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                        Unlock the power of <span className="text-white font-medium">Artificial Intelligence</span> to control your business 24/7, achieve unprecedented efficiency, reduce operational costs, and drive superior outcomes.
+                        Unlock the power of <span className="text-white font-medium">Artificial Intelligence</span> to control your entire business 24/7—from Finance and Administration to Marketing and Operations. Achieve unprecedented efficiency and drive superior outcomes across your entire organization.
                     </p>
 
                 </motion.div>

@@ -1,26 +1,26 @@
 import { motion } from 'framer-motion';
-import { PenTool, Target, BarChart, Settings, Rocket, Layers } from 'lucide-react';
+import { Network, Calculator, Building, Rocket } from 'lucide-react';
 
 const services = [
     {
-        icon: <PenTool size={32} className="text-rubid-red" />,
-        title: "Creative Automation",
-        desc: "Stop manually resizing banners. Our AI generates high-converting ad variations, writes copy in your brand voice, and iterates designs based on performance data instantly."
+        icon: <Rocket size={32} className="text-rubid-red" />,
+        title: "Marketing & Advertising (ADMAKI)",
+        desc: "Full-funnel autonomous execution. Our specialized AI takes control of bidding, creative rotation, and cross-platform campaign optimization to maximize your ROAS."
     },
     {
-        icon: <Target size={32} className="text-blue-500" />,
-        title: "Hyper-Targeting",
-        desc: "We don't guess audiences; we engineer them. Using cross-platform data signals to find your perfect customer before your competitors even know they exist."
+        icon: <Calculator size={32} className="text-blue-500" />,
+        title: "Finance & Administration",
+        desc: "Eliminate manual data entry and reconciliation errors. We deploy intelligent agents that handle invoicing, expense tracking, and real-time financial reporting securely."
     },
     {
-        icon: <Settings size={32} className="text-purple-500" />,
-        title: "Algorithmic Bidding",
-        desc: "Human traders sleep. Our algorithms bid 24/7, adjusting micro-budgets every millisecond to ensure you never overpay for a conversion again."
+        icon: <Building size={32} className="text-purple-500" />,
+        title: "Enterprise Process Automation",
+        desc: "Transform legacy workflows into streamlined digital pipelines. From HR operations to supply chain logistics, we identify bottlenecks and engineer autonomous solutions."
     },
     {
-        icon: <Rocket size={32} className="text-orange-500" />,
-        title: "Full-Funnel Execution",
-        desc: "From the first impression to the final sale, we automate the entire journey. Awareness, consideration, conversion—synced perfectly across all channels."
+        icon: <Network size={32} className="text-orange-500" />,
+        title: "Data & Tech Operations",
+        desc: "Unify your fragmented tools. We build centralized architectures that give your executive team total visibility and predictive insights 24/7."
     }
 ];
 
@@ -54,7 +54,7 @@ const Services = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-black text-white max-w-3xl mx-auto leading-tight"
                     >
-                        BUILT FOR <span className="text-rubid-red">AGILE AGENCIES</span> & <br />SMART ADVERTISERS.
+                        BUILT FOR <span className="text-rubid-red">FORWARD-THINKING</span> <br />ENTERPRISES.
                     </motion.h3>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const Services = () => {
                         transition={{ delay: 0.2 }}
                         className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg font-light"
                     >
-                        The old agency model is dead. We provide the infrastructure to automate 90% of your workload so you can focus on strategy, not spreadsheets.
+                        The old operational model is dead. We provide the intelligence layer to automate up to 90% of your company's digital workload so your teams can focus on strategy, not spreadsheets.
                     </motion.p>
                 </div>
 

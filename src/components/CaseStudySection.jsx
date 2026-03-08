@@ -126,8 +126,11 @@ const CaseStudySection = () => {
                                         <Target size={14} /> 01. The Challenge
                                     </div>
                                     <div className="border-l-2 border-white/10 pl-4 py-1">
+                                        <p className="text-lg text-white font-light leading-relaxed mb-4">
+                                            <span className="text-gray-500">{">"}</span> <strong>ADG Media Group</strong> was built on 30+ years of media experience and pioneers of AI attribution with <strong>Neural.ONE</strong> (created in 2010). But as they scaled, complexity exploded.
+                                        </p>
                                         <p className="text-lg text-white font-light leading-relaxed">
-                                            <span className="text-gray-500">{">"}</span> Managing <span className="text-white font-bold">300+ campaigns</span> across 12 platforms (Meta, Google, TikTok, DV360) was physically impossible. Manual optimizations were reactive, spreadsheets were outdated instantly, and man-hours were destroying margins.
+                                            <span className="text-gray-500">{">"}</span> Managing <span className="text-white font-bold">300+ campaigns</span> across 12 platforms manually was destroying margins. The executive board partnered with RUBID to integrate their entire technology stack, aligning Traders, Strategy & Media Planning, and Tech Ops under one automated brain: ADMAKI.
                                         </p>
                                     </div>
                                 </div>
